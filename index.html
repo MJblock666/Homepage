@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan's Portfolio</title>
+    <style>
+        /* 基础样式保持不变 */
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+        }
+
+        body {
+            background: url('https://api.btstu.cn/sjbz/?lx=dongman') fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            gap: 3rem;
+        }
+        .left-panel {
+            flex: 1;
+            min-width: 300px;
+        }
+        .right-panel {
+            flex: 2;
+            min-width: 400px;
+        }
+
+        .profile-header {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            transition: transform 0.3s;
+        }
+
+        .avatar:hover {
+            transform: rotate(360deg);
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            padding: 1.2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .button:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: grid;
+            place-items: center;
+            transition: 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .social-link img {
+            width: 60%;
+            height: 60%;
+        }
+
+        h1 { color: var(--primary); margin: 0.5rem 0; }
+        h2 { 
+            color: var(--accent); 
+            border-bottom: 2px solid; 
+            padding-bottom: 0.3rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 95%;
+                padding: 1rem;
+                gap: 2rem;
+            }
+            
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel - Personal Information -->
+        <div class="left-panel">
+            <div class="profile-header">
+                <img src="img/images.jpg" alt="Avatar" class="avatar">
+                <div>
+                    <h1>Jordan Zeng</h1>
+                    <p>Full Stack Developer (Learner) | Gaming Enthusiast</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://github.com/MJblock666" class="social-link" target="_blank">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub">
+                </a>
+                <a href="#" class="social-link" target="_blank">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="#" class="social-link" target="_blank">
+                    <img src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram.png" alt="Instagram">
+                </a>
+            </div>
+
+            <section class="about">
+                <h2>About Me</h2>
+                <p>👋 Hello! I'm Jordan, a 17-year-old developer from China. Passionate about programming interesting projects and researching logical mathematical problems. Have practical experience in web development and cybersecurity. Currently exploring backend development and database applications.</p>
+                
+                <h3>Education</h3>
+                <ul>
+                    <li>🏫 Johan de Witt - Zusterstraat</li>
+                    <li>📚 Computer Science</li>
+                    <li>🏆 9.7 / 10 Informatica Last year</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Right Panel - Project Showcase -->
+        <div class="right-panel">
+            <section class="projects">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>🎵 Music Player Demo(2023)</h3>
+                        <p>This project is a pure front-end creation, showcasing the capabilities of the fundamental trio.</p>
+                        <p>Tech Stack: Frontend Trio (HTML, CSS, JS) - Backend coming soon</p>
+                        <a href="https://github.com/MJblock666/Music-player-demo" 
+                           class="button"
+                           target="_blank"
+                           rel="noopener">
+                            <img src="https://img.icons8.com/ios-glyphs/20/ffffff/github.png" alt="GitHub">
+                            View Project
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <h3>🔒 Security-tracker (2025)</h3>
+                        <p>Machine learning-based network behavior analysis system for real-time anomaly detection.</p>
+                        <p>Tech Stack: Arduino + Node.js + MySQL</p>
+                        <a href="https://github.com/MJblock666/security-tracker"
+                           class="button"
+                           target="_blank"
+                           rel="noopener">
+                            <img src="https://img.icons8.com/ios-glyphs/20/ffffff/github.png" alt="GitHub">
+                            View Project
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
